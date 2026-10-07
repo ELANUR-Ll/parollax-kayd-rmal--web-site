@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAROLLAX WEB SİTE</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="menu.js">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">logo</a>
+        <ul>
+            <li><a href="#" class="active">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">WORK</a></li>
+            <li><a href="#">CONTANT</a></li>
+
+        </ul>
+    </header>
+    <section>
+        <img src="./resimler/stars.png" id="stars">
+        <img src="./resimler/moon.png" id="moon">
+        <img src="./resimler/mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="./resimler/mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>Maanlicht is een van de meest betoverende en universeel herkende natuurverschijnselen op aarde, een sereen
+            schijnsel dat al millennia lang de menselijke cultuur, mythologie, kunst en wetenschap vormgeeft. Hoewel
+            dichters en romantici het vaak bezingen als een mystieke, eigen lichtbron, leert de astronomie ons dat de
+            werkelijkheid een knap staaltje kosmische reflectie is: de maan geeft van zichzelf immers geen spatje licht
+            af. <br><br> Het zachte, zilverachtige schijnsel dat tijdens heldere nachten onze wereld verlicht, is in
+            feite niets
+            anders dan weerkaatst zonlicht. Wanneer de zon de naar de aarde toegekeerde zijde van de maan beschijnt,
+            treedt een proces op dat albedo wordt genoemd. Omdat het maanoppervlak grotendeels bestaat uit donkergrijs,
+            vulkanisch gesteente en regoliet (een fijne laag kosmisch stof), is de maan eigenlijk een verrassend slechte
+            spiegel; hij absorbeert het overgrote deel van de zonnestralen en reflecteert slechts zo'n 12 procent van
+            het opgevangen licht terug de ruimte in. <br><br> Dit gereflecteerde licht legt vervolgens met een snelheid
+            van bijna
+            300.000 kilometer per seconde de kosmos af, om na exact 1,26 seconden onze atmosfeer binnen te dringen en de
+            nachtelijke duisternis te verdrijven.
+            De intensiteit en de kwaliteit van dit licht transformeren voortdurend onder invloed van de maanfasen, die
+            worden bepaald door de wisselende posities van de aarde, de maan en de zon ten opzichte van elkaar. Tijdens
+            een nieuwe maan, wanneer de maan zich tussen de aarde en de zon bevindt, blijft de nacht aardedonker.
+            <br><br> Maar
+            naarmate de maan verder reist in haar baan om onze planeet, wast ze langzaam via het bekende sikkelvormige
+            'halve maantje' aan tot de spectaculaire volle maan. Op dat moment bereikt de verlichting haar absolute
+            piek, waarbij de gemiddelde lichtsterkte op aarde schommelt tussen de 0,05 en 0,1 lux. <br><br> Dit lijkt
+            wellicht
+            minimaal vergeleken met het felle daglicht van de zon (dat gemakkelijk 100.000 lux kan aantikken), maar het
+            is ruimschoots voldoende om het landschap in een dromerige gloed te zetten en menselijke contouren zichtbaar
+            te maken. Wanneer er sprake is van een zogenaamde supermaan — het moment waarop de maan zich in haar
+            elliptische baan het dichtst bij de aarde bevindt (het perigeum) — kan het maanlicht zelfs tot wel 30
+            procent feller zijn dan tijdens een gemiddelde volle maan, met uitschieters tot 0,32 lux. <br><br> Bovendien
+            kent het
+            fenomeen nog een subtielere variant die bekendstaat als aarde-licht (earthlight of Planetshine). Dit is te
+            zien tijdens de jonge maansikkel, wanneer zonlicht dat eerst door de wolken en oceanen van de aarde is
+            weerkaatst, de donkere, schaduwzijde van de maan subtiel verlicht, waardoor de volledige bol als een
+            spookachtige omtrek zichtbaar wordt aan de hemel. <br><br>
+            Interessant genoeg houdt het mysterie van maanlicht niet op bij de natuurkunde, maar strekt het zich uit tot
+            de menselijke biologie en psychologie. Wanneer we op een onbewolkte nacht naar buiten kijken, ervaren we het
+            maanlicht steevast als een koel, asgrijs of mysterieus blauwachtig licht. Dit is echter een fascinerende
+            optische illusie die wordt veroorzaakt door de werking van ons eigen oog, beter bekend als het
+            Purkinje-effect. <br><br> In de felle zon gebruiken we de kegeltjes in ons netvlies om kleuren (zoals rood
+            en geel)
+            scherp waar te nemen. Zodra de duisternis invalt en de lichtintensiteit drastisch daalt, schakelen onze ogen
+            over op de staafjes, die uiterst gevoelig zijn voor blauwe en groenachtige golflengten maar geen kleur
+            kunnen registreren. In werkelijkheid is maanlicht juist lichtelijk warm, met een gelige tot zachtwitte tint,
+            omdat de zon nu eenmaal een warm lichtspectrum uitzendt en de maan dit vrij getrouw terugkaatst. <br><br>
+            Dit koele,
+            zilveren visuele effect heeft historisch gezien geleid tot talloze volksverhalen over de psychologische
+            impact van de maan — van de mythe van de weerwolf tot het concept van 'lunacy' (krankzinnigheid door de
+            maan) — en hoewel moderne wetenschappers die extreme theorieën hebben ontkracht, tonen recente onderzoeken
+            wel degelijk aan dat de verhoogde helderheid tijdens een volle maan ons slaapritme subtiel kan verstoren,
+            simpelweg omdat het biologische klokken in de war brengt.
+        </p>
+
+
+    </div>
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY;
+            stars.style.left = value + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 2.5 + 'px';
+            text.style.marginTop = value * 1 + 'px';
+            btn.style.marginTop = value * 1 + 'px';
+            header.style.top = value * 0.5 + 'px';
+
+        })
+
+    </script>
+</body>
+
+</html>
